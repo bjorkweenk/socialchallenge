@@ -1,0 +1,9 @@
+.TabletMobile {
+    width: 300px;
+    height: 100px;
+    background: #cab9e5;
+    margin: 0 auto;
+}
+.TabletMobile p {
+    padding-top: 2%;
+}

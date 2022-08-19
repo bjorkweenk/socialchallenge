@@ -1,0 +1,14 @@
+.Footer {
+    height: 32px;
+    background-color: #262626 ;
+    text-align: center;
+}
+
+.footer-text {
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px; 
+    padding: 8px;
+}

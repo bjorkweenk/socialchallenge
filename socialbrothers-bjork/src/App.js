@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'
+import { useMediaQuery } from 'react-responsive'
+//import UserMessage from './UserMessage/UserMessage';
 
-function App() {
+import Mobile from "./components/Sizes/Mobile/Mobile"
+import TabletMobile from "./components/Sizes/tablet-mobile/TabletMobile"
+import Desktop from "./components/Sizes/Desktop/Desktop"
+import Laptop from "./components/Sizes/Laptop/Laptop"
+import Bigscreen from './components/Sizes/Bigscreen/Bigscreen';
+
+
+
+
+const App = () => {
+  const isMobileDevice = useMediaQuery({
+    query: "(min-device-width: 480px)",
+  });
+  
+  const isTabletDevice = useMediaQuery({
+    query: "(min-device-width: 768px)",
+  });
+  
+  const isLaptop = useMediaQuery({
+    query: "(min-device-width: 1024px)",
+  });
+  
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 1200px)",
+  });
+  
+  const isBigScreen = useMediaQuery({
+    query: "(min-device-width: 1201px )",
+  });
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       {isBigScreen && <Bigscreen />}
+      {isMobileDevice && <Mobile />}
+      {isTabletDevice && <>
+        <TabletMobile />
+        {isDesktop && <Desktop />}
+        {isLaptop && <Laptop />}
+      </>} 
+    </>
   );
 }
 
-export default App;
+export default App
