@@ -36,12 +36,12 @@ const App = () => {
   return (
     <>
        {isBigScreen && <Bigscreen />}
-      {isMobileDevice && <Mobile />}
+     {/* {isMobileDevice && <Mobile />}
       {isTabletDevice && <>
         <TabletMobile />
         {isDesktop && <Desktop />}
         {isLaptop && <Laptop />}
-      </>} 
+      </>} */}
     </>
   );
 }
